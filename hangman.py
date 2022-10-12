@@ -20,7 +20,6 @@ def new_game(root):
     first_frame = NewFrame(root, chosenWord, guessed_chars_list, guess_no)
     show_frame(first_frame)
 
-
 def show_frame(frame):
     frame.tkraise()
 
@@ -88,7 +87,6 @@ class NewFrame(tk.Frame):
        remaining_guesses.create_text(350, 55, text=message, font=INPUT_FONT)
        remaining_guesses.grid()
 
-
        image_list = ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg", "images/5.jpg", "images/6.jpg", "images/7.jpg", "images/8.jpg", "images/9.jpg", "images/10.jpg", ]
 
        hangman = ImageTk.PhotoImage(Image.open(image_list[9-number_left]))
@@ -103,8 +101,6 @@ class NewFrame(tk.Frame):
            letter_list = letter_list + chars + ' '
            remaining_guesses.create_text(350, 125, text=letter_list, font=INPUT_FONT)
 
-
-
 if __name__ == "__main__":
 
     root = tk.Tk()
@@ -112,7 +108,6 @@ if __name__ == "__main__":
     game_frame_list = [startpage]
     for frame in game_frame_list:
         frame.grid(row=0, column=0, sticky="nsew")
-
 
 ################## Start Page ##################
     button = tk.Button(startpage, width=25, text="Start Game", command= lambda: new_game(root))
@@ -127,10 +122,8 @@ if __name__ == "__main__":
 
     show_frame(startpage)
 
-
     root.title('Hangman')
     root.geometry('1000x900')
     root.resizable(0, 0)
-
 
     root.mainloop()

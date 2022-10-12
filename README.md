@@ -1,1 +1,2 @@
-Simple Hangman app written in Python using tkinter
+# Hangman
+Simple Hangman desktop app written in Python using tkinter
