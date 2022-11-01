@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter.constants import BOTTOM, CENTER, COMMAND, LEFT, RIGHT, TOP, END
 
-INPUT_FONT= ("Verdana", 22)
+INPUT_FONT= ("Verdana", 26)
 
 def new_game(root):
     with open('words.txt') as f:
@@ -109,7 +109,6 @@ if __name__ == "__main__":
     for frame in game_frame_list:
         frame.grid(row=0, column=0, sticky="nsew")
 
-################## Start Page ##################
     button = tk.Button(startpage, width=25, text="Start Game", command= lambda: new_game(root))
     root.bind('N', lambda event: new_game(root))
     button.grid()
@@ -118,7 +117,6 @@ if __name__ == "__main__":
     hangman = ImageTk.PhotoImage(image2)
     introImg = ttk.Label(startpage, image=hangman)
     introImg.grid()
-################################################
 
     show_frame(startpage)
 
